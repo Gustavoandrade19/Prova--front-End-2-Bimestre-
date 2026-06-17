@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição - ENEM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header><h1>Portal do Candidato - ENEM</h1></header>
+   
+    <main>
+        <div class="cartao">
+            <h2>Ficha de Inscrição</h2><br>
+            
+            <form id="formCadastro">
+                <div class="campo"><label>Nome Completo:</label><input type="text" required></div>
+                <div class="campo">
+                    <label>E-mail:</label>
+                    <input type="text" id="email">
+                    <div id="erro-email" class="txt-erro"></div>
+                </div>
+                <div class="campo"><label>Telefone:</label><input type="text" required></div>
+                <div class="campo"><label>Nome da Mãe:</label><input type="text" required></div>
+                <div class="campo"><label>Nome do Pai:</label><input type="text" required></div>
+                <div class="campo"><label>Endereço (Rua/Avenida):</label><input type="text" required></div>
+                <div class="campo"><label>Número:</label><input type="text" required></div>
+                <div class="campo"><label>Cidade:</label><input type="text" required></div>
+                <div class="campo"><label>Estado:</label><input type="text" required></div>
+                <div class="campo"><label>País:</label><input type="text" required></div>
+
+                <div class="campo">
+                    <label>Situação do Ensino Médio:</label>
+                    <select required>
+                        <option value="concluido">Já concluí</option>
+                        <option value="cursando">Estou cursando</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label>Tipo de Escola:</label>
+                    <select required>
+                        <option value="publica">Pública</option>
+                        <option value="privada">Privada</option>
+                    </select>
+                </div>
+
+                <!--começo da senha -->
+                <div class="campo">
+                    <label>Senha:</label>
+                    <input type="password" id="senha">
+                    <div id="erro-senha" class="txt-erro"></div>
+                </div>
+                
+                <div class="campo">
+                    <label>Confirmar Senha:</label>
+                    <input type="password" id="confirmarSenha">
+                    <div id="erro-confirmar" class="txt-erro"></div>
+                </div>
+                <!--final da senha-->
+
+                <button type="submit">Salvar Inscrição</button>
+                
+                <button type="button" class="btn-voltar" onclick="voltar()">Voltar</button>
+            </form>
+        </div>
+    </main>
+
+    <footer><p>&copy; 2026 Portal do Candidato - ENEM.</p></footer>
+
+    <script src="cadastro.js"></script>
+</body>
+</html> 

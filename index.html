@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <a href="cadastro.html">Voltar para a página inicial</a>
+    <header><h1>Portal do candidato Enem</Portal></h1></header>
+
+    <main>
+        <div class="cartao">
+        <div class="campo">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" placeholder="Digite seu e-mail">
+        </div>
+
+        <div class="campo">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" placeholder="Digite sua senha">
+        </div>
+            <button onclick="validarDados()">Entrar</button>
+
+        <div class="link-cadastro" onclick="irParaCadastro()">
+            Cadastrar Novo Usuário
+        </div>
+    </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 Portal do Candidato - ENEM. Todos os direitos reservados para gustavo rodrigues de andrade.</p>
+    </footer>
+   
+    <script src="login.js"></script>
+</body>
+</html>
