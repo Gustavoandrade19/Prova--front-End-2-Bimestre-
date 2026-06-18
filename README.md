@@ -1,26 +1,45 @@
-"# Prova--front-End-2-Bimestre-"  
-"# Prova--front-End-2-Bimestre-"  
+# Portal do Candidato - ENEM (Projeto Completo)
 
-    O Portal do Candidato – ENEM é um site de inscrição simulado onde o usuário pode criar um cadastro e acessar o sistema por meio de login. Ele possui duas telas principais: uma para entrar com e-mail e senha e outra para preencher os dados pessoais da inscrição. O site deve ter um visual organizado e profissional, semelhante aos portais governamentais, além de validar informações como e-mail e senha para garantir que os dados sejam preenchidos corretamente. Também deve funcionar bem em computadores e celulares.
+Este repositório contém o sistema completo do **Portal do Candidato do ENEM**, desenvolvido para a disciplina de Versionamento do curso de Desenvolvimento de Sistemas (M-TEC 3 DS - Grupo A).
 
+O sistema simula o fluxo completo de um candidato, desde a criação da conta até a escolha de cursos e confirmação de inscrição.
 
-    # Portal do Candidato - ENEM
+---
 
-Projeto prático desenvolvido para a disciplina de Versionamento do curso de Desenvolvimento de Sistemas (M-TEC 3 DS - Grupo A).
+## 💻 Módulos do Sistema
 
-## 🚀 Funcionalidades
+1. **Tela de Login (`index.html` & `login.js`)**
+   - Validação de credenciais de acesso.
+   - Integração com a memória do navegador (`localStorage`) para ler os dados criados na tela de cadastro.
+   - Usuário padrão para testes rápidos: `teste@email.com` / `Teste1234`.
 
-- **Tela de Login e Cadastro:** Validação de e-mail e requisitos de senha forte integrados via `localStorage`.
-- **Painel Principal:** Navegação intuitiva por meio de cards integrados.
-- **Consulta de Cursos:** Listagem dinâmica utilizando Arrays Bidimensionais e filtragem com o método `.filter()`.
-- **Inscrição Dinâmica:** Formulário com exibição condicional de campos de acessibilidade via manipulação do DOM e feedbacks visuais de erro/sucesso na tela.
+2. **Tela de Cadastro (`cadastro.html` & `cadastro.js`)**
+   - Criação de novos usuários com validações em tempo de execução:
+     - O e-mail precisa conter o caractere `@`.
+     - A senha precisa ter no mínimo 8 caracteres e pelo menos uma letra maiúscula.
+   - Armazenamento seguro dos dados no `localStorage`.
 
-## 🛠️ Tecnologias Utilizadas
+3. **Painel Principal (`painel.html`)**
+   - Hub central de navegação no formato de cards responsivos.
+   - Redirecionamento dinâmico para as demais seções do portal.
 
-- HTML5
-- CSS3 (Layout unificado com barras fixas)
-- JavaScript (Manipulação de DOM e controle de estado)
-- Git / GitHub (Versionamento com histórico de commits)
+4. **Verificação de Cursos (`cursos.html` & `cursos.js`)**
+   - Listagem dinâmica utilizando **Arrays Bidimensionais** contendo 12 cursos divididos por suas respectivas áreas de conhecimento.
+   - Filtragem automatizada em tela utilizando o método obrigatório `.filter()`.
+
+5. **Inscrição na Prova (`inscricao.html` & `inscricao.js`)**
+   - Formulário interativo com escolha de língua estrangeira, estado e cidade.
+   - **Campo Condicional Dinâmico:** Ao selecionar "Sim" em atendimento especializado, um novo campo de texto é exibido manipulando as classes do DOM.
+   - Feedbacks visuais customizados para erros e sucessos na cor correta (sem o uso de alertas travando a tela).
+
+---
+
+## 🛠️ Tecnologias e Conceitos Aplicados
+
+- **HTML5:** Estruturação semântica de formulários, menus e tabelas.
+- **CSS3:** Identidade visual unificada seguindo os padrões do ENEM (azul escuro, amarelo e fundo claro) com cabeçalho e rodapé fixos.
+- **JavaScript Moderno:** Manipulação de eventos (`onchange`, `onclick`), manipulação do DOM (`classList`, `innerHTML`), persistência de dados local e manipulação de arrays.
+- **Git & GitHub:** Versionamento com boas práticas e mensagens de commit descritivas.
 
 ## 🧑‍🏫 Orientação
 - **Professor:** Engº Sérgio Novais
