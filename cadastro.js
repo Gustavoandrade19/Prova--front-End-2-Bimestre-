@@ -15,34 +15,30 @@ document.getElementById('formCadastro').addEventListener('submit', function(even
 
     var valido = true;
 
-
     if (!email.includes('@')) {
         erroEmail.textContent = "O e-mail deve conter o caractere @.";
         erroEmail.style.display = 'block';
         valido = false;
     }
 
-  
     if (senha.lengtSenhah < 8 || senha === senha.toLowerCase()) {
         erroSenha.textContent = "A senha deve conter no mínimo 8 caracteres e uma letra maiúscula.";
         erroSenha.style.display = 'block';
         valido = false;
     }
 
-    
+
     if (senha !== confirmar) {
         erroConfirmar.textContent = "A confirmação de senha deve ser exatamente igual à senha.";
         erroConfirmar.style.display = 'block';
         valido = false;
     }
-
     
     if (valido) {
         alert("Inscrição salva com sucesso!");
         window.location.href = "index.html"; n
     }
 });
-
 
 function voltar() {
     window.location.href = "index.html";
